@@ -1,25 +1,26 @@
+//depencies
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+//pages
+import HomePage from './pages/home/HomePage'; 
+import MoviesPage from './pages/movies/MoviesPage';
+import MoviePage from './pages/movie/MoviePage';
+import SeriesPage from './pages/series/SeriesPage';
+import SpecificSeriesPage from './pages/specific series/SpecificSeriesPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/TV_series" element={<SeriesPage />} />
+        <Route path="/movies/:movieId" element={<MoviePage />} />
+        <Route path="/TV_series/:seriesId" element={<SpecificSeriesPage />} />
+      </Routes>
+    </Router>
   );
 }
 
