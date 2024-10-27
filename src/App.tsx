@@ -3,12 +3,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 //pages
-import HomePage from './pages/home/HomePage'; 
+import HomePage from './pages/home/HomePage';
 import MoviesPage from './pages/movies/MoviesPage';
 import MoviePage from './pages/movie/MoviePage';
 import SeriesPage from './pages/series/SeriesPage';
 import SpecificSeriesPage from './pages/specific series/SpecificSeriesPage';
-
 
 function App() {
   return (
