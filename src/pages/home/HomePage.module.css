@@ -1,0 +1,13 @@
+.div-wrap-row-light{
+    margin-top: 9.5%;
+    padding: 6%;
+    color: black;
+    border-radius: 75px;
+}
+
+.div-wrap-row-dark{
+    margin-top: 9.5%;
+    padding: 6%;
+    color: white;
+    border-radius: 75px;
+}

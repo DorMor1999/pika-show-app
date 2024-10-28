@@ -29,8 +29,8 @@ export const ThemeContextProvider = ({
   const [theme, setTheme] = useState('light');
 
   // Function to toggle the theme between 'light' and 'dark'.
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  const toggleTheme = ():void => {
+    setTheme((prevTheme: string) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   return (
