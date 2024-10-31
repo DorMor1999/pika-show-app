@@ -1,0 +1,12 @@
+.error-status{
+    color: #d9534f !important;
+    font-size: xx-large !important;
+}
+
+.error-msg-dark{
+    color:  black;
+}
+
+.error-msg-light{
+    color: white;
+}
