@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment, useContext } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import Wrapper from '../UI/Wrapper/Wrapper';
 import { Movie, Series, SortTypeOBJ } from '../../util/types';
 import CardList from './CardList';

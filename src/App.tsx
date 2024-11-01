@@ -12,6 +12,7 @@ import NavBar from './shared/components/NavBar/NavBar';
 import { ThemeContextProvider } from './shared/context/ThemeContext';
 
 function App() {
+  
   return (
     <Router>
       <ThemeContextProvider>
@@ -20,8 +21,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/series" element={<SeriesPage />} />
-          <Route path="/movies/:movieId" element={<MoviePage />} />
-          <Route path="/series/:seriesId" element={<SpecificSeriesPage />} />
+          <Route path="/movies/:itemId" element={<MoviePage />} />
+          <Route path="/series/:itemId" element={<SpecificSeriesPage />} />
         </Routes>
       </ThemeContextProvider>
     </Router>

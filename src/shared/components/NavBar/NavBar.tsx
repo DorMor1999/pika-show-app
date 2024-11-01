@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useNavigate } from 'react-router-dom';
 
 //my components
 import MoonIcon from '../../assets/NavBar icons/MoonIcon';
@@ -11,6 +12,7 @@ import ThemeContext from '../../context/ThemeContext';
 
 const NavBar: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   //events
   function onClickTheme(selectedTheme: string): void {
@@ -20,20 +22,30 @@ const NavBar: React.FC = () => {
     console.log(`Theme changed to: ${theme}`);
   }
 
+  function moveToOtherPage(path: string): void {
+    navigate(`${path}`);
+  }
+
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      className={`bg-${theme} ${theme}-theme`} 
+      className={`bg-${theme} ${theme}-theme`}
       data-bs-theme={theme}
     >
       <Container>
-        <Navbar.Brand href="/">Home</Navbar.Brand>
+        <Nav.Link>
+          <Navbar.Brand onClick={() => moveToOtherPage('/')}>Home</Navbar.Brand>
+        </Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/movies">Movies</Nav.Link>
-            <Nav.Link href="/series">Series</Nav.Link>
+            <Nav.Link onClick={() => moveToOtherPage('/movies')}>
+              Movies
+            </Nav.Link>
+            <Nav.Link onClick={() => moveToOtherPage('/series')}>
+              Series
+            </Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown

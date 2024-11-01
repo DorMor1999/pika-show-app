@@ -9,7 +9,7 @@ const IntervalCarousel: React.FC<{
   return (
     <Carousel>
       {images.map((currentImage) => (
-        <Carousel.Item interval={2500}>
+        <Carousel.Item interval={2500} key={currentImage.alt}>
           <CarouselImage src={currentImage.src} alt={currentImage.alt} />
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
